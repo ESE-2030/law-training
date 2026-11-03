@@ -128,7 +128,7 @@ body {
         linear-gradient(to bottom, #ffffff 0%, #f8fafc 40%, #f1f5f9 100%);
     border: 2.5px solid var(--gold-primary);
     border-radius: 24px;
-    padding: 30px 36px 28px;
+    padding: 28px 36px 26px;
     position: relative;
     box-shadow: 0 20px 50px rgba(15, 23, 42, 0.12);
     overflow: hidden;
@@ -147,39 +147,41 @@ body {
     pointer-events: none;
 }
 
-/* Header: Two Official Prominent Logos */
+/* Header: Two Extra-Large Prominent Logos */
 .poster-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
-    padding-bottom: 16px;
+    margin-bottom: 22px;
+    padding-bottom: 18px;
     border-bottom: 1.5px solid rgba(15, 23, 42, 0.08);
 }
 
 .header-logo-card {
     display: flex;
     align-items: center;
-    gap: 14px;
+    gap: 16px;
 }
 
+/* Enlarged Logos from 88px to 118px! */
 .logo-circle-large {
-    width: 88px;
-    height: 88px;
+    width: 118px;
+    height: 118px;
     border-radius: 50%;
     background: #ffffff;
-    border: 2.5px solid var(--gold-primary);
-    box-shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
+    border: 3px solid var(--gold-primary);
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.1);
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
     flex-shrink: 0;
+    transition: transform 0.2s;
 }
 
 .logo-circle-green {
     border-color: var(--emerald-primary);
-    box-shadow: 0 6px 18px rgba(5, 150, 105, 0.2);
+    box-shadow: 0 8px 24px rgba(5, 150, 105, 0.25);
 }
 
 .logo-circle-large img {
@@ -194,16 +196,18 @@ body {
 }
 
 .logo-text-meta .org-sub {
-    font-size: 0.78rem;
+    font-size: 0.82rem;
     color: var(--text-muted);
-    font-weight: 600;
+    font-weight: 700;
     display: block;
+    margin-bottom: 2px;
 }
 
 .logo-text-meta .org-title {
-    font-size: 1.05rem;
-    font-weight: 800;
+    font-size: 1.15rem;
+    font-weight: 900;
     color: var(--text-primary);
+    line-height: 1.35;
 }
 
 .logo-text-meta .org-title-green {
@@ -212,24 +216,27 @@ body {
 
 .header-crest {
     text-align: center;
+    padding: 0 10px;
 }
 
 .crest-badge {
     background: var(--gold-bg-subtle);
-    border: 1px solid var(--gold-border);
+    border: 1.5px solid var(--gold-border);
     color: var(--gold-dark);
-    padding: 6px 18px;
+    padding: 7px 18px;
     border-radius: 9999px;
-    font-size: 0.84rem;
+    font-size: 0.86rem;
     font-weight: 800;
     display: inline-flex;
     align-items: center;
     gap: 6px;
+    white-space: nowrap;
+    box-shadow: 0 2px 8px rgba(180, 83, 9, 0.08);
 }
 
 .crest-line {
-    width: 60px;
-    height: 2px;
+    width: 70px;
+    height: 2.5px;
     background: var(--gold-gradient);
     margin: 6px auto 0;
     border-radius: 9999px;
@@ -238,7 +245,7 @@ body {
 /* Poster Main Title */
 .poster-title-section {
     text-align: center;
-    margin-bottom: 22px;
+    margin-bottom: 20px;
 }
 
 .exclusive-badge {
@@ -277,14 +284,14 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 14px;
-    margin-bottom: 22px;
+    margin-bottom: 20px;
 }
 
 .spec-card {
     background: #ffffff;
     border: 1.5px solid rgba(15, 23, 42, 0.08);
     border-radius: 14px;
-    padding: 14px 10px;
+    padding: 13px 10px;
     text-align: center;
     box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
 }
@@ -292,7 +299,7 @@ body {
 .spec-card i {
     font-size: 1.45rem;
     color: var(--emerald-primary);
-    margin-bottom: 6px;
+    margin-bottom: 5px;
     display: inline-block;
 }
 
@@ -314,13 +321,13 @@ body {
     font-weight: 600;
 }
 
-/* Key Topics Grid (Full Rich Layout Without Lecturers) */
+/* Key Topics Grid */
 .topics-container {
     background: #ffffff;
     border: 1.5px solid var(--emerald-border);
     border-radius: 16px;
-    padding: 20px 22px;
-    margin-bottom: 20px;
+    padding: 18px 22px;
+    margin-bottom: 18px;
     box-shadow: 0 4px 14px rgba(15, 23, 42, 0.04);
 }
 
@@ -328,10 +335,10 @@ body {
     display: flex;
     align-items: center;
     gap: 8px;
-    font-size: 1.15rem;
+    font-size: 1.12rem;
     font-weight: 800;
     color: var(--emerald-dark);
-    margin-bottom: 14px;
+    margin-bottom: 12px;
     padding-bottom: 8px;
     border-bottom: 1.5px solid rgba(5, 150, 105, 0.15);
 }
@@ -339,7 +346,7 @@ body {
 .topics-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 12px 18px;
+    gap: 10px 18px;
 }
 
 .topic-item {
@@ -347,7 +354,7 @@ body {
     border: 1px solid rgba(15, 23, 42, 0.07);
     border-right: 4px solid var(--emerald-primary);
     border-radius: 8px;
-    padding: 10px 14px;
+    padding: 9px 13px;
     display: flex;
     align-items: flex-start;
     gap: 10px;
@@ -387,17 +394,17 @@ body {
     background: #ffffff;
     border: 1.5px solid var(--gold-border);
     border-radius: 16px;
-    padding: 18px 22px 16px;
-    margin-bottom: 20px;
+    padding: 16px 20px 14px;
+    margin-bottom: 18px;
     box-shadow: 0 4px 16px rgba(15, 23, 42, 0.05);
 }
 
 .pres-header-title {
     text-align: center;
-    font-size: 0.88rem;
+    font-size: 0.86rem;
     font-weight: 700;
     color: var(--gold-dark);
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 }
 
 .dual-pres-grid {
@@ -405,7 +412,7 @@ body {
     grid-template-columns: 1fr auto 1fr;
     align-items: center;
     gap: 16px;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 }
 
 .pres-col {
@@ -418,7 +425,7 @@ body {
     border-radius: 9999px;
     font-size: 0.76rem;
     font-weight: 700;
-    margin-bottom: 5px;
+    margin-bottom: 4px;
 }
 
 .badge-engineers {
@@ -463,10 +470,10 @@ body {
     gap: 5px 8px;
     font-size: 0.78rem;
     color: var(--text-secondary);
-    padding: 8px 0;
+    padding: 7px 0;
     border-top: 1px dashed rgba(15, 23, 42, 0.1);
     border-bottom: 1px dashed rgba(15, 23, 42, 0.1);
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
 .council-members-names span {
@@ -495,7 +502,7 @@ body {
 .coord-post-label {
     display: block;
     color: var(--text-muted);
-    font-size: 0.75rem;
+    font-size: 0.74rem;
     font-weight: 700;
     margin-bottom: 2px;
 }
@@ -510,9 +517,9 @@ body {
     background: linear-gradient(135deg, #ecfdf5 0%, #ffffff 50%, #fef3c7 100%);
     border: 1.5px solid var(--gold-border);
     border-radius: 16px;
-    padding: 20px 24px;
+    padding: 18px 22px;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
     box-shadow: 0 4px 14px rgba(15, 23, 42, 0.05);
 }
 
@@ -520,7 +527,7 @@ body {
     font-size: 1.25rem;
     color: #0f172a;
     font-weight: 800;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -536,7 +543,7 @@ body {
     color: var(--text-secondary);
     line-height: 1.7;
     max-width: 780px;
-    margin: 0 auto 14px;
+    margin: 0 auto 12px;
 }
 
 .accreditation-pills {
@@ -680,7 +687,7 @@ body {
     <!-- The Ultra-Luxury Poster Container -->
     <div class="poster-container" id="posterElement">
         
-        <!-- Header: The TWO Official Logos Only (Engineers FIRST on Right) -->
+        <!-- Header: The TWO Extra-Large Official Logos (Engineers FIRST on Right) -->
         <div class="poster-header">
             <!-- Engineers Foundation Logo (Right in RTL - FIRST) -->
             <div class="header-logo-card">
@@ -696,7 +703,7 @@ body {
             <!-- Strategic Protocol Crest -->
             <div class="header-crest">
                 <div class="crest-badge">
-                    <i class="fa-solid fa-handshake"></i> بروتوكول تعاون استراتيجي مشترك
+                    <i class="fa-solid fa-handshake"></i> بروتوكول تعاون استراتيجي
                 </div>
                 <div class="crest-line"></div>
             </div>
