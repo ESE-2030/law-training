@@ -1235,3 +1235,41 @@ h1, h2, h3, h4, .font-heading {
 .coord-team-member i {
     color: var(--gold-light);
 }
+
+/* Engineers Leadership Grid */
+.engineers-leadership-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.eng-leader-item {
+    background: rgba(212, 175, 55, 0.08);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    border-radius: var(--radius-sm);
+    padding: 12px 10px;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.eng-leader-item:hover {
+    border-color: var(--gold-light);
+    background: rgba(212, 175, 55, 0.15);
+}
+
+.leader-role {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--gold-light);
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.leader-name {
+    font-size: 1.15rem;
+    color: var(--text-white);
+    font-weight: 800;
+    margin: 0;
+    font-family: var(--font-body);
+}
