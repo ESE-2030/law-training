@@ -764,6 +764,8 @@ section {
     text-align: center;
     box-shadow: var(--shadow-sm);
     transition: var(--transition);
+    display: flex;
+    flex-direction: column;
 }
 
 .mgmt-card:hover {
@@ -874,13 +876,14 @@ section {
     background: #ffffff;
     border: 1px solid var(--border-light);
     border-radius: 12px;
-    padding: 18px 16px;
+    padding: 20px 18px;
     display: flex;
     align-items: center;
     gap: 16px;
     text-align: right;
     box-shadow: 0 2px 6px rgba(0,0,0,0.03);
     transition: var(--transition);
+    flex: 1;
 }
 
 .mgmt-single-box:hover {
@@ -890,9 +893,13 @@ section {
 }
 
 .mgmt-single-box .duo-avatar {
-    width: 58px;
-    height: 58px;
-    border-color: var(--gold-primary);
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2.5px solid var(--gold-primary);
+    box-shadow: 0 3px 10px rgba(184, 134, 11, 0.2);
+    flex-shrink: 0;
 }
 
 .mgmt-single-box .mgmt-name {
