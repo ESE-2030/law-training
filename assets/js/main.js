@@ -70,21 +70,35 @@ document.addEventListener('DOMContentLoaded', () => {
     updateCountdown();
     setInterval(updateCountdown, 1000);
 
-    // 3. Floating Button Visibility Control
+    // 3. Floating Button Visibility Control (Show only after scrolling past hero)
     const registerSection = document.getElementById('register');
     const floatBtn = document.querySelector('.floating-register-btn');
 
     if (registerSection && floatBtn) {
-        window.addEventListener('scroll', () => {
+        // Initial state: hidden
+        floatBtn.style.opacity = '0';
+        floatBtn.style.pointerEvents = 'none';
+        floatBtn.style.transition = 'all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1)';
+        floatBtn.style.transform = 'translateY(15px)';
+
+        const handleScroll = () => {
+            const scrollPos = window.scrollY || window.pageYOffset;
             const rect = registerSection.getBoundingClientRect();
-            // If register section is visible in viewport, hide floating button
-            if (rect.top <= window.innerHeight && rect.bottom >= 0) {
-                floatBtn.style.opacity = '0';
-                floatBtn.style.pointerEvents = 'none';
-            } else {
+            const inRegister = rect.top <= window.innerHeight && rect.bottom >= 0;
+            const pastHero = scrollPos > 350;
+
+            if (pastHero && !inRegister) {
                 floatBtn.style.opacity = '1';
                 floatBtn.style.pointerEvents = 'auto';
+                floatBtn.style.transform = 'translateY(0)';
+            } else {
+                floatBtn.style.opacity = '0';
+                floatBtn.style.pointerEvents = 'none';
+                floatBtn.style.transform = 'translateY(15px)';
             }
-        });
+        };
+
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        handleScroll();
     }
 });
