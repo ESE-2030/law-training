@@ -1656,3 +1656,27 @@ section {
         font-size: 1.2rem;
     }
 }
+
+
+.designer-credit {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #ffffff;
+    padding: 6px 18px;
+    border-radius: 9999px;
+    border: 1px solid var(--emerald-border);
+    box-shadow: 0 2px 8px rgba(27, 94, 32, 0.08);
+}
+
+.designer-credit strong {
+    color: var(--emerald-dark);
+    font-weight: 800;
+}
+
+.designer-credit i {
+    color: var(--emerald-primary);
+}

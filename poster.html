@@ -463,16 +463,73 @@ body {
     background: linear-gradient(to bottom, transparent, var(--gold-primary), transparent);
 }
 
+.coordination-subgrid {
+    display: grid;
+    grid-template-columns: 1.18fr 0.82fr;
+    gap: 12px;
+    font-size: 0.82rem;
+    margin: 10px 0 10px;
+}
+
+.coord-post-item {
+    text-align: center;
+    background: #f8fafc;
+    border-radius: 8px;
+    padding: 7px 10px;
+    border: 1px solid rgba(15, 23, 42, 0.08);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.coord-post-label {
+    display: block;
+    color: var(--primary-green);
+    font-size: 0.76rem;
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+
+.coord-post-item:last-child .coord-post-label {
+    color: var(--primary-gold);
+}
+
+.coord-stacked {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.coord-person {
+    color: #0f172a;
+    font-size: 0.82rem;
+    line-height: 1.25;
+}
+
+.coord-person strong {
+    font-weight: 800;
+    color: #0f172a;
+}
+
+.coord-person small {
+    font-size: 0.73rem;
+    color: #475569;
+    font-weight: 600;
+}
+
+.coord-single {
+    justify-content: center;
+    height: 100%;
+}
+
 .council-members-names {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 6px 8px;
-    font-size: 0.74rem;
+    gap: 5px 6px;
+    font-size: 0.72rem;
     color: var(--text-secondary);
-    padding: 7px 0;
-    border-top: 1px dashed rgba(15, 23, 42, 0.12);
-    border-bottom: 1px dashed rgba(15, 23, 42, 0.12);
-    margin-bottom: 9px;
+    padding: 8px 0 2px;
+    border-top: 1px dashed rgba(15, 23, 42, 0.14);
 }
 
 .council-members-names span {
@@ -483,34 +540,6 @@ body {
     font-weight: 700;
     text-align: center;
     white-space: nowrap;
-}
-
-.coordination-subgrid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 14px;
-    font-size: 0.82rem;
-}
-
-.coord-post-item {
-    text-align: center;
-    background: #f8fafc;
-    border-radius: 8px;
-    padding: 6px 10px;
-    border: 1px solid rgba(15, 23, 42, 0.06);
-}
-
-.coord-post-label {
-    display: block;
-    color: var(--text-muted);
-    font-size: 0.74rem;
-    font-weight: 700;
-    margin-bottom: 2px;
-}
-
-.coord-post-names {
-    color: #0f172a;
-    font-weight: 700;
 }
 
 /* Strategic Accreditation Banner (In Poster 2) */
@@ -824,6 +853,29 @@ body {
                 </div>
             </div>
 
+            <!-- Coordination & Executive Management (Foundation FIRST) -->
+            <div class="coordination-subgrid">
+                <div class="coord-post-item">
+                    <span class="coord-post-label"><i class="fa-solid fa-compass"></i> القيادة التنفيذية وإدارة البرنامج (المؤسسة)</span>
+                    <div class="coord-post-names coord-stacked">
+                        <div class="coord-person">
+                            <strong>د. حازم عواد</strong> <small>(عضو مجلس الأمناء والمدير التنفيذي)</small>
+                        </div>
+                        <div class="coord-person">
+                            <strong>د. سمر سمير</strong> <small>(نائب المدير التنفيذي وإدارة البرنامج)</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="coord-post-item">
+                    <span class="coord-post-label"><i class="fa-solid fa-handshake"></i> الإشراف وتنسيق البروتوكول (النقابة)</span>
+                    <div class="coord-post-names coord-stacked coord-single">
+                        <div class="coord-person">
+                            <strong>الأستاذ / أيوب مجدي يعقوب</strong> <small>(المحامي بالنقض)</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <!-- Council Members Grid -->
             <div class="council-members-names">
                 <span>أ/ أبو العلا مكي</span>
@@ -838,22 +890,6 @@ body {
                 <span>أ/ مهاب عثمان</span>
             </div>
 
-            <!-- Coordination & Executive Management (Foundation FIRST) -->
-            <div class="coordination-subgrid">
-                <div class="coord-post-item">
-                    <span class="coord-post-label"><i class="fa-solid fa-compass"></i> القيادة التنفيذية وإدارة البرنامج (المؤسسة)</span>
-                    <div class="coord-post-names">
-                        <strong>د. حازم عواد</strong> <small>(عضو مجلس الأمناء والمدير التنفيذي)</small> • 
-                        <strong>د. سمر سمير</strong> <small>(نائب المدير التنفيذي وإدارة البرنامج)</small>
-                    </div>
-                </div>
-                <div class="coord-post-item">
-                    <span class="coord-post-label"><i class="fa-solid fa-handshake"></i> الإشراف وتنسيق البروتوكول (النقابة)</span>
-                    <div class="coord-post-names">
-                        <strong>الأستاذ / أيوب مجدي يعقوب</strong> <small>(المحامي بالنقض)</small>
-                    </div>
-                </div>
-            </div>
         </div>
 
         <!-- Poster Footer / Registration Callout & QR (NO PRICES! Links to GitHub Pages) -->
