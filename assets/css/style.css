@@ -333,6 +333,43 @@ a {
     margin: 0 auto;
 }
 
+.hero-announcement-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, rgba(5, 150, 105, 0.08) 0%, rgba(180, 83, 9, 0.08) 100%);
+    border: 1.5px solid var(--emerald-border);
+    padding: 10px 24px;
+    border-radius: var(--radius-full);
+    font-size: 1.05rem;
+    color: var(--text-primary);
+    font-weight: 700;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 16px rgba(5, 150, 105, 0.1);
+}
+
+.hero-announcement-pill i {
+    color: var(--emerald-primary);
+    font-size: 1.15rem;
+}
+
+.hero-announcement-pill strong {
+    color: var(--emerald-dark);
+}
+
+.program-owner-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 20px;
+    border-radius: var(--radius-full);
+    font-size: 0.92rem;
+    font-weight: 800;
+    background: var(--emerald-primary);
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(5, 150, 105, 0.25);
+}
+
 .badge-wrapper {
     display: flex;
     justify-content: center;
