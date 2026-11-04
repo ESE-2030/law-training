@@ -1217,8 +1217,24 @@ section {
 
 .features-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 24px;
+}
+
+@media (max-width: 1024px) {
+    .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+}
+}
+
+@media (max-width: 576px) {
+    .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+}
 }
 
 .feature-box {
@@ -1544,8 +1560,10 @@ section {
         grid-template-columns: repeat(2, 1fr);
     }
     .lecturers-grid, .features-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+}
     .council-grid {
         grid-template-columns: repeat(3, 1fr);
     }
@@ -1589,8 +1607,10 @@ section {
     }
 
     .lecturers-grid, .features-grid {
-        grid-template-columns: 1fr;
-    }
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+}
 
     .council-grid {
         grid-template-columns: repeat(2, 1fr);
