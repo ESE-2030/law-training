@@ -1,0 +1,24 @@
+# Local helper scripts
+*.py
+generate_preview_card.html
+
+# Previews & screenshots
+council_screenshot.png
+mobile_preview.png
+website_preview.png
+
+# Raw temp media from chat
+WhatsApp*
+8335aad4*
+*.ogg
+*.docx
+*.zip
+
+# Local manual upload folder
+رفع/
+رفع.zip
+
+# System & caches
+__pycache__/
+.DS_Store
+Thumbs.db
