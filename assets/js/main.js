@@ -88,10 +88,12 @@ document.addEventListener('DOMContentLoaded', () => {
             const pastHero = scrollPos > 350;
 
             if (pastHero && !inRegister) {
+                floatBtn.classList.add('visible');
                 floatBtn.style.opacity = '1';
                 floatBtn.style.pointerEvents = 'auto';
                 floatBtn.style.transform = 'translateY(0)';
             } else {
+                floatBtn.classList.remove('visible');
                 floatBtn.style.opacity = '0';
                 floatBtn.style.pointerEvents = 'none';
                 floatBtn.style.transform = 'translateY(15px)';

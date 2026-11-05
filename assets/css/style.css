@@ -1028,6 +1028,37 @@ section {
 }
 
 /* ================= Council Members: Tiered Layout ================= */
+
+/* ================= Council Members: Unified 2-Column Grid (Paper Order) ================= */
+.council-unified-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    max-width: 780px;
+    margin: 0 auto;
+}
+
+.council-avatar-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #0b2c25 0%, #175245 100%);
+    color: var(--gold-light);
+    font-size: 2.2rem;
+    border-radius: 50%;
+    border: 3px solid #ffffff;
+    outline: 2px solid var(--gold-primary);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+}
+
+.council-photo-card:hover .council-avatar-placeholder {
+    transform: scale(1.04);
+}
+
 .council-featured-grid {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -1666,6 +1697,16 @@ section {
     bottom: 25px;
     left: 25px;
     z-index: 999;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(20px);
+    transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.floating-register-btn.visible {
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    transform: translateY(0) !important;
 }
 
 .float-btn {
@@ -1816,6 +1857,12 @@ section {
 }
 
 @media (max-width: 480px) {
+    .council-unified-grid {
+        gap: 10px;
+    }
+    .council-avatar-placeholder {
+        font-size: 1.8rem;
+    }
     .hero-announcement-pill {
         font-size: 0.82rem !important;
         padding: 10px 10px !important;
